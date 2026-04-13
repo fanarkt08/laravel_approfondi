@@ -7,7 +7,7 @@ use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use App\Models\Setting;
+use App\Models\Settings;
 
 class User extends Authenticatable
 {
@@ -50,11 +50,6 @@ class User extends Authenticatable
 
     public function settings()
     {
-        return $this->hasOne(Setting::class);
-    }
-
-    public function user()
-    {
-        return $this->belongsTo(User::class);
+        return $this->hasOne(Settings::class);
     }
 }

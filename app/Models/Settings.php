@@ -4,13 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Setting extends Model
+class Settings extends Model
 {
-    // Autorise l'insertion de données (important pour create())
     protected $fillable = [
         'theme',
-        'lang',
-        'user_id'
+        'lang'
     ];
 
     // Relation avec User (One-to-One inverse)
