@@ -16,10 +16,10 @@ class GroupUserSeeder extends Seeder
     {
         $user = User::first();
 
-        $group = Group::create([
-            'name' => 'Family'
-        ]);
+        $family = Group::create(['name' => 'Family']);
+        $friends = Group::create(['name' => 'Friends']);
 
-        $group->users()->attach($user->id);
+        $family->users()->attach($user->id);
+        $friends->users()->attach($user->id);
     }
 }
