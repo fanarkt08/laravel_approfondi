@@ -17,9 +17,6 @@ class GroupUserSeeder extends Seeder
         $user = User::first();
 
         $family = Group::create(['name' => 'Family']);
-        $friends = Group::create(['name' => 'Friends']);
-
         $family->users()->attach($user->id);
-        $friends->users()->attach($user->id);
     }
 }
