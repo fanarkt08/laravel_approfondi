@@ -26,7 +26,9 @@ class DatabaseSeeder extends Seeder
         $this->call([
             SettingsSeeder::class,
             GroupUserSeeder::class,
-            OrderSeeder::class
+            OrderSeeder::class,
+            ProductOrderSeeder::class,
+            SubscriptionOrderSeeder::class
         ]);
     }
 }
